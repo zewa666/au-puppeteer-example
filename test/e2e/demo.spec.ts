@@ -39,8 +39,12 @@ describe("starting the app", () => {
     await browser.close();
   });
 
+  // keep in mind that the github request is not authed
+  // that means it can get blocked/throttled by Github
+  // and cause the test to fail
   it("should show github users when switching to the respective tab", async () => {
-    jest.setTimeout(50000);
+    // increase the jest timeout since the request might take longer (depending on your connection)
+    jest.setTimeout(20000);
     const { browser, page } = await arrange();
     const SEL_githubUsersNavbarLink = ".navbar-nav li:nth-child(2)";
     const SEL_githubProfiles = ".user-card-container";
