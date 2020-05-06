@@ -39,7 +39,7 @@ describe("starting the app", () => {
     await browser.close();
   });
 
-  fit("should show github users when switching to the respective tab", async () => {
+  it("should show github users when switching to the respective tab", async () => {
     jest.setTimeout(50000);
     const { browser, page } = await arrange();
     const SEL_githubUsersNavbarLink = ".navbar-nav li:nth-child(2)";
