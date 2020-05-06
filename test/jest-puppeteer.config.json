@@ -1,0 +1,20 @@
+{
+  "modulePaths": [
+    "<rootDir>/src",
+    "<rootDir>/node_modules",
+    "<rootDir>/aurelia_project"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "transform": {
+    "^.+\\.(ts|tsx)$": "ts-jest"
+  },
+  "testMatch": [
+    "<rootDir>/e2e/**/*.spec.ts"
+  ],
+  "testEnvironment": "node",
+  "collectCoverage": false
+}
